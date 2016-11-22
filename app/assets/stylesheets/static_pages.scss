@@ -1,3 +1,53 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h1 {
+	font-family: Helvetica, sans-serif;
+	color: green;
+	text-align: center;
+}
+
+p {
+	font-family: Garamond, serif;
+}
+
+.index-welcome {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+
+/* NAVBAR*/
+
+.navbar-default {
+   background-color: #4ca64c;
+   border-color: #198c19;
+}
+
+.navbar-default .navbar-brand {
+    color: black;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+
+/* FOOTER */
+
+footer {
+	text-align: left;
+	background-color: #4ca64c;
+	height: 30px;
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+  left: 0;
+}
+
+.container-footer {
+	width: 80%;
+	margin-left: 10%
+	
+}
