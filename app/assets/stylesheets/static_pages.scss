@@ -63,6 +63,32 @@ p {
 	background-color: #eee;
 }
 
+
+/* CONTACT PAGE */
+
+.contact-intro {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.container {
+  width: 40%;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 60%;
+  }
+}
+
+
+.form-control {
+  width: 100%;
+}
+
+
+
+
 /* FOOTER */
 
 footer {
