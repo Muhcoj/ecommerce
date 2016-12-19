@@ -36,10 +36,23 @@ p {
 
 .navbar-default .navbar-nav>.active>a {
 	background-color: #4ca64c;
+  color: black;
 }
 
 .form-control {
   width: auto;
+}
+
+.login {
+  margin-top: 5px;
+}
+
+.nav>li>a:hover {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+  background-color: transparent;
 }
 
 
