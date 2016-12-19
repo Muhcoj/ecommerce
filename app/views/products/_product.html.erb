@@ -7,7 +7,10 @@
           <h3><%= product.name %></h3>
           <h4><%= product.description %></h4>
           <p><%= product.colour %></p>
-          <strong>€ <%= product.price %></strong>
+          <strong>€ <%= product.price %></strong><br>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </div><!-- end box-description -->
       </div><!-- end product-box -->
     </div><!-- end col -->
