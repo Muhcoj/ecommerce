@@ -2,30 +2,30 @@
   <p id="notice" class="alert alert-info" role="alert"><%= notice %></p>
 <% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="product-box">
+        <a href="#">
+          <%= image_tag(@product.image_url, class: "img-responsive") %>
+        </a>
+        <div class="product-box-description">
+          <h3><%= @product.name %></h3>
+         
+          <h4><%= @product.description %></h4>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+          <p><%= @product.colour %></p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+          <p><span class="glyphicon glyphicon-euro"></span> <strong><%= @product.price %></strong></p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+          <%= @product.highest_rating_comment %><%= @product.lowest_rating_comment %>
+          <br>
+          <div class="top-10">
+          <%= link_to 'Edit', edit_product_path(@product) %> |
+          <%= link_to 'Back', products_path %>
+          </div>
+        </div><!-- end box-description -->
+      </div><!-- end .product-box -->
+    </div><!-- end .col -->
+  </div><!-- end .row -->
+</div><!-- end .container -->
