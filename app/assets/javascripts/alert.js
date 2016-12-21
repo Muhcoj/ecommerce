@@ -1,1 +1,4 @@
-$(.alert).delay(1000).fadeOut(500);
+$(document).on('turbolinks:load', function(){
+  
+  $(".alert").delay(4000).fadeOut("slow");
+});

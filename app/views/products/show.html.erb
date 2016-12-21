@@ -4,12 +4,16 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <div class="product-box">
-        <a href="#">
-          <%= image_tag(@product.image_url, class: "img-responsive") %>
-        </a>
-        <div class="product-box-description">
+    <div class="col-md-6 col-xs-12">
+      <%= image_tag(@product.image_url, class: "img-responsive") %>
+      <div class="top-10">
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Back', products_path %>
+      </div>
+    </div><!-- end .col 6/12 -->
+
+    <div class="col-md-6 col-xs-12">
+      <div class="product-box-description">
           <h3><%= @product.name %></h3>
          
           <h4><%= @product.description %></h4>
@@ -18,14 +22,40 @@
 
           <p><span class="glyphicon glyphicon-euro"></span> <strong><%= @product.price %></strong></p>
 
-          <%= @product.highest_rating_comment %><%= @product.lowest_rating_comment %>
-          <br>
-          <div class="top-10">
-          <%= link_to 'Edit', edit_product_path(@product) %> |
-          <%= link_to 'Back', products_path %>
-          </div>
-        </div><!-- end box-description -->
-      </div><!-- end .product-box -->
+          <p>Average rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+      </div><!-- end box-description -->
     </div><!-- end .col -->
   </div><!-- end .row -->
+  
+
+  <div class="row top-50">
+    <div class="col-md-6 col-xs-12">
+      <h4 class="txt-center">Product Ratings</h4>
+      <% if !@product.comments.empty? %>
+      <div class="col-md-4 col-xs-12">
+        <div class="container-rating">
+          <div class="rated" data-score="<%= @product.highest_rating_comment %>"></div>
+          <h5>Good Comments</h5>
+          <p><%= @product.highest_rating_comment %></p>
+        </div><!-- end .container-rating -->
+      </div><!-- end .col 4/12 -->
+
+      <div class="col-md-4 col-xs-12">
+        <div class="container-rating">
+          <div class="rated" data-score="<%= @product.lowest_rating_comment %>"></div>
+          <h5>Bad Comments</h5>
+          <p><%= @product.lowest_rating_comment %></p>
+        </div><!-- end .container-rating -->
+      </div><!-- end .col 4/12 -->
+      <% end %>
+
+      <div class="col-md-4 col-xs-12">
+        <div class="container-rating">
+        <%= render partial: "new_comment" %>
+        </div><!-- end .container-rating -->
+      </div><!-- end .col 4/12 -->
+
+    </div><!-- end .col 6/12 -->
+  </div><!-- end .row -->
+
 </div><!-- end .container -->
