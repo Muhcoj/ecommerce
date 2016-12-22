@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+
+/***********DEVICE*********/
+
+.devise-wrap {
+	width: 40%;
+	margin: 0 auto 0 auto;
+}
+
+@media (max-width: 992px) {
+	.devise-wrap {
+		width: 60%;
+	}
+}
+
+@media (max-width: 768px) {
+	.devise-wrap {
+		width: 80%;
+	}
+}
