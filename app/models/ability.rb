@@ -6,6 +6,10 @@ class Ability
     # In the next line, :manage is the action to the argument can. any user can manage (perform any action) with a User object.
     can :manage, User, id: user.id # The second parameter is the restriction, meaning that the user must have the same ID as his or her User record does, i.e., the user can manage his or her self.
 
+    if user.admin?
+        can :destroy, Comment
+        can :manage, Product
+    end
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
