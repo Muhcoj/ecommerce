@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand">Brand</a>
+          <a class="navbar-brand" href="/static_pages/landing_page">Brand</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -66,10 +66,17 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="flash-notices">
-      <p class="notice text-info"><%= notice %></p>
-      <p class="alert text-danger"><%= alert %></p>
-    </div><!-- flash-notices --> 
+    <% if notice %>
+      <div class="alert alert-info flash-bkgr" role="alert">
+        <p id="notice" class="alert alert-info flash"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="alert alert-danger " role="alert">
+        <p id="alert" class="alert alert-info flash"><%= alert %></p>
+      </div>
+    <% end %>
 
     <%= yield %>
 

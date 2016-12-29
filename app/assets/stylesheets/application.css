@@ -33,3 +33,15 @@
 		width: 80%;
 	}
 }
+
+/**********FLASH NOTICE/ALERT*********/
+
+.flash {
+	text-align: center;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.flash-bkgr {
+	background-color: rgba(76, 166, 76, 0.3);
+}
