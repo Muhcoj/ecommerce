@@ -24,7 +24,7 @@ describe UsersController, :type => :controller do
 
 			#it "doesn't load the second user" do
 			  	#get :show, id: @user2.id
-			  	#expect(response).to_not be_valid
+			  	
 			  	#expect(response.status).to eq 302
 			  	#expect(response).to redirect_to(root_path)
 			#end
