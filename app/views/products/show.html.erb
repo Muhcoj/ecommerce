@@ -23,6 +23,9 @@
           <p><span class="glyphicon glyphicon-euro"></span> <strong><%= @product.price %></strong></p>
 
           <p>Average rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+          <%= form_tag "/payments/create" do %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+          <% end %>
 
       </div><!-- end box-description -->
     </div><!-- end .col -->

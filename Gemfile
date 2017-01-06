@@ -37,6 +37,8 @@ gem 'cancancan', '~> 1.10'
 # will_paginate is a pagination library that integrates with Ruby on Rails, Sinatra, Merb, DataMapper and Sequel.
 gem 'will_paginate', '~> 3.1.1'
 
+# payments
+gem 'stripe'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
