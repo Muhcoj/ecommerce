@@ -12,7 +12,14 @@ class UserMailer < ApplicationMailer
     	@appname = "Berlin Bikes"
     	mail( :to => user.email,
     		  :subject => "Thank you for your interest in #{@appname}")
-    	
+    end
+
+    def paid_order(user, product)
+        @user = user
+        @product = product
+        @appname = "Berlin Bikes"
+        mail( :to => user.email,
+              :subject => "Thank you for your order at #{@appname}")
     end
 
 
