@@ -12,12 +12,13 @@
       </div>
     </div><!-- end .col 6/12 -->
 
+    <% cache @product do %>
     <div class="col-md-6 col-xs-12">
       <div class="product-box-description">
           <h3><%= @product.name %></h3>
          
           <h4><%= @product.description %></h4>
-
+    <% end %>
           <p><%= @product.colour %></p>
 
           <p><span class="glyphicon glyphicon-euro"></span> <strong><%= @product.price %></strong></p>
