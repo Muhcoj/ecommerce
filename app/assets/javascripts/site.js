@@ -1,5 +1,4 @@
-$(document).on('turbolinks:load', function(){
-	
+var refreshRating = function() {
 	$('.rating').raty( { path: '/images', scoreName: 'comment[rating]' });
 	
 	$('.rated').raty({ path: '/images',
@@ -8,6 +7,11 @@ $(document).on('turbolinks:load', function(){
 			return $(this).attr('data-score');
 		}
 	});
+};
+
+$(document).on('turbolinks:load ajaxSuccess', function(){
+	
+	refreshRating();
 	
 	//A jQuery image zoom plugin
 	$('.img-zoom').elevateZoom({
