@@ -43,6 +43,12 @@ gem 'stripe'
 #Dalli is a high performance pure Ruby client for accessing memcached servers. 
 gem 'dalli'
 
+# redis-rails provides a full set of stores (Cache, Session, HTTP Cache)
+gem 'redis-rails'
+
+#Performance
+gem 'newrelic_rpm'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
