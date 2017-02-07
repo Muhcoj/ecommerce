@@ -7,8 +7,10 @@ describe Product do
 	
 	context "when the product has comments" do  # create context
 		before do  # before running the test...
-			@product = Product.create!(:name => "race bike", :description => "lalalala", :image_url => "test.com/test", :price => 50, :colour => "red" )
-			@user = User.create!(:email => "user@email.com", :password => "12345678")
+			#@product = Product.create!(:name => "race bike", :description => "lalalala", :image_url => "test.com/test", :price => 50, :colour => "red" )
+			#@user = User.create!(:email => "user@email.com", :password => "12345678")
+			@product = FactoryGirl.create(:product)
+			@user = FactoryGirl.create(:user)
 			@product.comments.create!(:rating => 1, :user => @user, :body => "worst")
 			@product.comments.create!(:rating => 3, :user => @user, :body => "better")
 			@product.comments.create!(:rating => 5, :user => @user, :body => "best")
